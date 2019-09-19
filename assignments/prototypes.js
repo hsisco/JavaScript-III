@@ -170,15 +170,16 @@ Villain.prototype.monologue = function(){
 const knight = new Hero({
   createdAt: new Date(),
   dimensions: {
-    length: 2,
+    length: 1,
     width: 1,
-    height: 1,
+    height: 3,
   },
   healthPoints: 5,
   name: 'Kevin',
   team: 'The Round Table',
   weapons: [
     'Excalibur',
+    'his dashing good looks'
   ],
   language: 'Common Tongue',
   yourDay: 'save',
@@ -188,8 +189,8 @@ const knight = new Hero({
 const demon = new Villain({
   createdAt: new Date(),
   dimensions: {
-    length: 2,
-    width: 1,
+    length: 4,
+    width: 2,
     height: 1,
   },
   healthPoints: 5,
