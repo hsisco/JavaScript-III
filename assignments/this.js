@@ -9,11 +9,11 @@
 * write out a code example of each explanation above
 */
 
-// Principle 1
+// Principle 1: Global
 
-console.log(this)
+console.log(this) // returns 'undefined', because its too broad, but still working
 
-// Principle 2
+// Principle 2: Implicit
 
 const myObj = {
   greeting: 'Hello',
@@ -21,9 +21,9 @@ const myObj = {
       return `${this.greeting}, world!`
   }
 };
-myObj.speak();
+console.log(myObj.speak());
 
-// Principle 3
+// Principle 3: New
 
 function Person(obj){
   this.name = obj.name;
@@ -35,10 +35,10 @@ function Person(obj){
 const hysen = new Person({name: 'Hysen', age: 31});
 const olivia = new Person({name: 'Olivia', age: 1});
 
-hysen.speak();
-olivia.speak();
+console.log(hysen.speak());
+console.log(olivia.speak());
 
-// Principle 4
+// Principle 4: Explicit
 
 hysen.speak.call(olivia)
 olivia.speak.apply(hysen);
